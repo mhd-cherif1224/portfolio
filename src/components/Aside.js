@@ -6,14 +6,16 @@ const navItems = ["Home", "Work", "Contact", "About"];
 const Aside = () => {
     return (
         <aside className="aside">
-            {navItems.map((item) => (
-                <NavBtn
-                    key={item}
-                    text={item}
-                    active={item === "Home"}
-                    iswork={item === "Work"}
-                />
-            ))}
+            
+                {navItems.map((item) => (
+                    <NavBtn
+                        key={item}
+                        text={item}
+                        active={item === "Home"}
+                        iswork={item === "Work"}
+                    />
+                ))}
+            
         </aside>
     );
 }

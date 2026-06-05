@@ -1,0 +1,95 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.press-start-2p-regular {
+  font-family: "Press Start 2P", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.body-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 3fr 0.5fr;
+    grid-template-rows: 1fr 1fr 1fr;  /* ← Changed from 1fr 5fr 1fr */
+    gap: 0px;
+    background-color: #000;
+    min-height: 100vh;
+    height: 100vh;
+}
+
+.box11, .box21, .box31, .box13, .box23, .box33 {
+    background-color: #D3CCBA;
+}
+
+.box11 {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+}
+
+.aside {
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+    background-color: #D3CCBA;
+    padding-left: 10px;
+    padding-right: 20px;
+}
+
+.box21 {
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+}
+
+.box31 {
+    grid-column: 3 / 4;
+    grid-row: 1 / 2;
+}
+
+.box13 {
+    grid-column: 1 / 2;
+    grid-row: 3 / 4;
+}
+
+.box23 {
+    grid-column: 2 / 3;
+    grid-row: 3 / 4;
+}
+
+.box33 {
+    grid-column: 3 / 4;
+    grid-row: 3 / 4;
+}
+
+.main {
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+    background-color: black;
+    color: white;
+    overflow-y: auto;
+}
+
+.box32 {
+    grid-column: 3 / 4;
+    grid-row: 2 / 3;
+    background-color: #D3CCBA;
+}
+
+.main p {
+    text-indent: 2rem;
+    font-weight: 400;
+    font-size: 1rem;
+    padding: 1rem;
+}
+
+.box11, .box21, .box31 {
+    height: 100px;  /* Row 1 height */
+    background-color: #D3CCBA;
+}
+
+.box13, .box23, .box33 {
+    height: 100px;  /* Row 3 height */
+    background-color: #D3CCBA;
+}

@@ -1,10 +1,10 @@
 import logo from './logo.svg';
 import './App.css';
-import Aside from './components/Aside';
+import Body from './components/Body';
 
 function App() {
   return (
-      <Aside />
+      <Body />
   );
 }
 
