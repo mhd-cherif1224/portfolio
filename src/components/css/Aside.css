@@ -1,11 +1,27 @@
+*{
+    box-sizing: border-box;
+}
+
 .aside{
+    display: flex;
+    flex-wrap: nowrap;
+
+}
+
+.left{
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: start;
     width: 100%;
-    height: 100vh;
+    height: 100%;
     background-color: #D3CCBA;
     gap: 1rem;
+}
+
+.right{
+    display: flex;
+    align-items: center;
+    justify-content: end;
 }
 

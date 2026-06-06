@@ -11,14 +11,24 @@ html, body {
   font-style: normal;
 }
 
+.sedgwick-ave-display-regular {
+  font-family: "Sedgwick Ave Display", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+
 .body-wrapper {
     display: grid;
-    grid-template-columns: 1fr 3fr 0.5fr;
-    grid-template-rows: 1fr 1fr 1fr;  /* ← Changed from 1fr 5fr 1fr */
+    grid-template-columns: 0.6fr 3fr 0.5fr;
+    grid-template-rows: 100px 1fr 100px;  /* ← Changed from 1fr 5fr 1fr */
     gap: 0px;
     background-color: #000;
     min-height: 100vh;
     height: 100vh;
+    overflow: hidden;
+    filter: blur(0.7px);
+    
 }
 
 .box11, .box21, .box31, .box13, .box23, .box33 {
@@ -34,13 +44,8 @@ html, body {
     grid-column: 1 / 2;
     grid-row: 2 / 3;
     background-color: #D3CCBA;
-    padding-left: 10px;
-    padding-right: 20px;
-}
-
-.box21 {
-    grid-column: 2 / 3;
-    grid-row: 1 / 2;
+    padding-left: 7%;
+    
 }
 
 .box31 {
@@ -53,10 +58,6 @@ html, body {
     grid-row: 3 / 4;
 }
 
-.box23 {
-    grid-column: 2 / 3;
-    grid-row: 3 / 4;
-}
 
 .box33 {
     grid-column: 3 / 4;
@@ -69,27 +70,86 @@ html, body {
     background-color: black;
     color: white;
     overflow-y: auto;
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: end;
+
+    line-height: 1.5;
+    border: 3px #Fff solid;
+    background-image: url('../images/bg.gif'); 
+    background-size: cover; 
+    background-position: center;
+    background-repeat: no-repeat;
+
+    
+    
 }
 
-.box32 {
-    grid-column: 3 / 4;
-    grid-row: 2 / 3;
-    background-color: #D3CCBA;
+.home-icon{
+    width:49px;
+    height: 40.28px;
+}
+.bar-top-home{
+    background-color:#02007F;
+    width: 100%;
+    height: 40px;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10;
 }
 
-.main p {
+.globe {
+    width: 420px;
+    height: 315px;
+   
+    padding-left: 3rem;
+    align-self: start;
+}
+.first-phrase {
+    color: #Fff;
+    margin: 0;
+    align-self: start;
+    padding-left:3rem ;
+    font-size: 1.4rem;
+    text-indent: 2rem;
+}
+
+.name{
+    font-size: 6rem;
+    color: #F5F353;
+    margin: 0;
+    align-self: start;
+    padding-left:3rem ;
+}
+
+.description{
     text-indent: 2rem;
     font-weight: 400;
-    font-size: 1rem;
-    padding: 1rem;
+    font-size: 1.4rem;
+    padding: 3rem;
+    margin-bottom: 0%;
+    margin-top: 0%;
+    padding-top: 0;
+    width: 70%;
+    align-self: start;
+
+
 }
 
-.box11, .box21, .box31 {
-    height: 100px;  /* Row 1 height */
-    background-color: #D3CCBA;
+.music{
+    width: 85px;
+    height : 116.96px;
+    position : absolute;
+    align-self: end;
+    justify-self: end;
+    margin: 3rem;
+    cursor : pointer;
 }
 
-.box13, .box23, .box33 {
-    height: 100px;  /* Row 3 height */
-    background-color: #D3CCBA;
-}
