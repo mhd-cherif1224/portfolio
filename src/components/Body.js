@@ -1,26 +1,31 @@
 import Aside from './Aside';
+import Box11 from './Box11';
+import Box31 from './Box31';
+import Box13 from './Box13';
 import Box32 from './Box32';
 import Box21 from './Box21';
 import Box23 from './Box23';
+import Box33 from './Box33';
 import "./css/Body.css";
 import globImg from "./images/globe.gif";
 import homeIcon from "./images/home-icon.png";
 import music from "./images/music.gif";
-
+import moon from "./images/moon.gif";
 
 const Body = () => {
     return (
         <div className="body-wrapper">
             
-            <div className="box11"> </div>
+            <Box11 />
             <Box21 />
-            <div className="box31"> </div>
+            <Box31 />
 
             <Aside />
             <div className="main press-start-2p-regular">
                 <div className="bar-top-home press-start-2p-regular">
-                    <img className='home-icon' src={homeIcon} />Home V5.13 [en]</div>
-                <img className='globe' src={globImg} alt="a planet that says welcome" />
+                <img className='home-icon' src={homeIcon} />Home V5.13 [en]</div>
+                {/* <img className='moon' src={moon} alt="a moon that says welcome"/> */}
+                {/* <img className='globe' src={globImg} alt="a planet that says welcome" /> */}
                 <p className='first-phrase press-start-2p-regular'>  my name is</p>
                 <p className='name sedgwick-ave-display-regular'> Mehdi Cherif</p>
                 <p className='description press-start-2p-regular'>  I am a UI/UX Designer and a Front-End Developer, I believe that designing a web site is an art.</p>
@@ -28,9 +33,9 @@ const Body = () => {
             </div>
             <Box32 />
 
-            <div className="box13"> </div>
+            <Box13 />
             <Box23 />
-            <div className="box33"></div>
+            <Box33 />
         </div>
     );
 }

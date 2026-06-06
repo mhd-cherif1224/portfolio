@@ -8,6 +8,11 @@ const NavBtn = ({text, active, onClick, iswork }) => {
         : "nav-btn press-start-2p-regular";
     const blueShit = iswork ? {color : "#02007F"} : {};
 
+        if(onClick){
+            
+
+        }
+
     return (
         <button className={className} onClick={onClick} style={blueShit} >
             {text}

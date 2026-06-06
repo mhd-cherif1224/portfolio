@@ -1,0 +1,5 @@
+.box13 {
+    grid-column: 1 / 2;
+    grid-row: 3 / 4;
+    background-color: #D3CCBA;
+}

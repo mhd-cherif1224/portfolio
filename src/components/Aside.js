@@ -14,6 +14,7 @@ const Aside = () => {
                             text={item}
                             active={item === "Home"}
                             iswork={item === "Work"}
+                            onClick={item}
                         />
                     ))}
 

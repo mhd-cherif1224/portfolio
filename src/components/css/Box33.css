@@ -1,0 +1,5 @@
+.box33 {
+    grid-column: 3 / 4;
+    grid-row: 3 / 4;
+    background-color: #D3CCBA;
+}

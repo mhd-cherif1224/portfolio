@@ -27,7 +27,7 @@ html, body {
     min-height: 100vh;
     height: 100vh;
     overflow: hidden;
-    filter: blur(0.7px);
+    
     
 }
 
@@ -78,7 +78,8 @@ html, body {
     justify-content: end;
 
     line-height: 1.5;
-    border: 3px #Fff solid;
+    border-left: 3px #Fff solid;
+    border-top: 3px #Fff solid;
     background-image: url('../images/bg.gif'); 
     background-size: cover; 
     background-position: center;
@@ -91,6 +92,8 @@ html, body {
 .home-icon{
     width:49px;
     height: 40.28px;
+    margin-left: 10px;
+    margin-right: 10px;
 }
 .bar-top-home{
     background-color:#02007F;
@@ -103,6 +106,17 @@ html, body {
     top: 0;
     left: 0;
     z-index: 10;
+}
+
+.moon{
+
+    width : 96px;
+    height : 96px;
+    align-self: start ;
+    position: absolute;
+    left : 300px;
+    top : 300px;
+
 }
 
 .globe {
@@ -123,7 +137,7 @@ html, body {
 
 .name{
     font-size: 6rem;
-    color: #F5F353;
+    color: #D3CCBA;
     margin: 0;
     align-self: start;
     padding-left:3rem ;
