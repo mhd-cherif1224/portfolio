@@ -3,7 +3,7 @@ import "./css/Aside.css";
 
 const navItems = ["Home", "Work", "Contact", "About"];
 
-const Aside = () => {
+const Aside = ({ onNavClick }) => {
     return (
         <aside className="aside">
                 <div className="left">
@@ -14,7 +14,7 @@ const Aside = () => {
                             text={item}
                             active={item === "Home"}
                             iswork={item === "Work"}
-                            onClick={item}
+                            onClick={() => onNavClick(item)}
                         />
                     ))}
 

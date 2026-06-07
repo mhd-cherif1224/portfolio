@@ -1,0 +1,4 @@
+.window-group-container{
+    display : flex;
+    justify-content: space-between;
+}

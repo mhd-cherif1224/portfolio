@@ -1,0 +1,67 @@
+.contact-panel{
+    background-color: #C0C0C0;
+    width : 500px;
+    height : 500px;
+    position: absolute;
+    top : 50%;
+    left : 50%;
+    transform: translate(-50%, -50%);
+    z-index : 999;
+    border-top: #fff solid 3px;
+    border-left: #fff solid 3px;
+    border-bottom: #000000 solid 3px;
+    border-right: #000000 solid 3px;
+    border-right-color: #000000 solid 3px;
+    position: fixed;
+    touch-action: none; 
+}
+
+.contact-panel.react-draggable-dragging{
+
+    cursor: grabbing;
+    z-index: 99;
+}
+
+.bar-top-contact{
+    background-color: #02007F;
+    color: #fff;
+    display: flex;
+
+    cursor: grab;
+    height: 40px;
+    
+}
+
+.bar-top-contact:active {
+    cursor: grabbing;
+}
+
+.left-top-bar{
+    background-color: #02007F;
+    display: flex;
+    justify-content: space-between;
+    gap : auto;
+
+}
+
+.letter{
+    margin-left: 10px;
+    margin-right: 10px;
+}
+.body-contact{
+
+    display: flex;
+    justify-content: space-evenly;
+
+}
+.title{
+
+    text-align: center;
+}
+
+.window-group{
+    
+
+
+
+}

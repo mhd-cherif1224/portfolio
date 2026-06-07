@@ -80,10 +80,11 @@ html, body {
     line-height: 1.5;
     border-left: 3px #Fff solid;
     border-top: 3px #Fff solid;
-    background-image: url('../images/bg.gif'); 
+    /* background-image: url('../images/bg.gif'); 
     background-size: cover; 
     background-position: center;
-    background-repeat: no-repeat;
+    background-repeat: no-repeat; */
+    background-color: #008282;
 
     
     

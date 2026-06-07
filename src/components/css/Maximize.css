@@ -1,0 +1,32 @@
+*{
+    box-sizing:border-box;
+
+}
+body{
+
+    background-color: #1a26d6;
+}
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width : 35px;
+    height: 35px;
+    background-color: #C0C0C0;
+    border-left: #fff solid 3px;
+    border-bottom: #000000 solid 3ox;
+    border-right: #000000 solid 3px;
+    
+
+
+}
+
+.border{
+    box-sizing: border-box;
+    width : 28px;
+    height: 28px;
+    border-top: #000 solid 4px;
+    transform: translateY(4px);
+
+    
+}

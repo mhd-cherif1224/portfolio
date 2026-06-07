@@ -1,19 +1,16 @@
 import "./css/WindowGroup.css";
+import Min from "./Minimize"
+import Max from "./Maximize.js"
+import Close from "./Close"
 
 
 const WindowGroup = () => {
     return (
-        <>
-            <div className="minimize">
-
-            </div>
-            <div className="maximize">
-                
-            </div>
-            <div className="close">
-                
-            </div>
-        </>
+        <div className="window-group-container">
+            <Min />
+            <Max />
+            <Close />
+        </div>
 
     );
 
