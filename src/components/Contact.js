@@ -18,7 +18,7 @@ const Contact = () => {
             <div ref={nodeRef} className="contact-panel">
                 <div className="bar-top-contact press-start-2p-regular">
                     <div className="left-top-bar">
-                        <img src={letter} alt="a letter icon" />
+                        <img className='letter' src={letter} alt="a letter icon" />
                         <div className='title'>
                             Contact
                         </div>

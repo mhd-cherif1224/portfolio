@@ -1,10 +1,10 @@
-.contact-panel{
+.about-panel{
     background-color: #C0C0C0;
-    width : 500px;
-    height : 500px;
+    width : 1500px;
+    height : 700px;
     position: absolute;
-    top : 50%;
-    left : 50%;
+    top : 25%;
+    right : 25%;
     transform: translate(-50%, -50%);
     z-index : 999;
     border-top: #fff solid 3px;
@@ -16,13 +16,13 @@
     touch-action: none; 
 }
 
-.contact-panel.react-draggable-dragging{
+.about-panel.react-draggable-dragging{
 
     cursor: grabbing;
     z-index: 99;
 }
 
-.bar-top-contact{
+.bar-top-about{
     background-color: #02007F;
     color: #fff;
     display: flex;
@@ -33,27 +33,27 @@
     height: 40px;
 }
 
-.bar-top-contact:active {
+.bar-top-about:active {
     cursor: grabbing;
 }
 
 .left-top-bar{
-    background-color: #02007F;
     display: flex;
     align-items: center;
     gap: 8px;
 }
 
-.letter{
+.man{
     width:44px;
     height: 38.28px;
     margin-left: 10px;
     margin-right: 10px;
 }
-.body-contact{
 
-    display: flex;
-    justify-content: space-evenly;
+.body-about{
+    text-indent: 3rem;
+    line-height: 155%;
+    font-size: 1.4rem;
 
 }
 .title{
@@ -65,4 +65,8 @@
     display: flex;
     align-items: center;
     justify-content: flex-end;
+}
+
+.para-about{
+    margin : 70px;
 }

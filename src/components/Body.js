@@ -8,6 +8,7 @@ import Box21 from './Box21';
 import Box23 from './Box23';
 import Box33 from './Box33';
 import Contact from './Contact';
+import About from './About';
 import "./css/Body.css";
 import globImg from "./images/globe.gif";
 import homeIcon from "./images/home-icon.png";
@@ -39,6 +40,7 @@ const Body = () => {
                 <p className='description press-start-2p-regular'>  I am a UI/UX Designer and a Front-End Developer, I believe that designing a web site is an art.</p>
                 <img className='music' src={music} alt="music"/>
                 {activePanel === 'Contact' && <Contact />}
+                {activePanel === 'About' && <About />}
             </div>
             <Box32 />
 

@@ -1,11 +1,11 @@
-import "./css/Maximize.css";
+import "./css/Close.css";
 
-
-const Maximize = () => {
+const Close = () => {
     return(
-        <button className="container">
-            <div className="border-conatiner">
-                <div className="border"></div>
+        <button className="close-button">
+            <div className="close-icon">
+                <span />
+                <span />
             </div>
         </button>
 
@@ -13,4 +13,4 @@ const Maximize = () => {
     );
 }
 
-export default Maximize;
+export default Close;

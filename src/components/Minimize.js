@@ -1,14 +1,12 @@
-import "./css/Maximize.css";
+import "./css/Minimize.css";
 
 
-const Maximize = () => {
+const Minimize = () => {
     return(
         <button className="container">
-            <div className="border"></div>
+            <div className="minimize-bar"></div>
         </button>
-
-
     );
 }
 
-export default Maximize;
+export default Minimize;
