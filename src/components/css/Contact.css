@@ -1,28 +1,25 @@
-.contact-panel{
+.contact-panel {
     background-color: #C0C0C0;
-    width : 500px;
-    height : 500px;
-    position: absolute;
-    top : 50%;
-    left : 50%;
-    transform: translate(-50%, -50%);
-    z-index : 999;
+    width: 500px;
+    height: 500px;
+    position: fixed; /* Only one position declaration */
+    touch-action: none;
+    z-index: 999;
     border-top: #fff solid 3px;
     border-left: #fff solid 3px;
     border-bottom: #000000 solid 3px;
     border-right: #000000 solid 3px;
-    border-right-color: #000000 solid 3px;
-    position: fixed;
-    touch-action: none; 
+    /* Remove transform, top, left - let react-draggable handle positioning */
+    display: flex;
+    flex-direction: column;
 }
 
-.contact-panel.react-draggable-dragging{
-
+.contact-panel.react-draggable-dragging {
     cursor: grabbing;
-    z-index: 99;
+    z-index: 1000; /* Bring to front while dragging */
 }
 
-.bar-top-contact{
+.bar-top-contact {
     background-color: #02007F;
     color: #fff;
     display: flex;
@@ -31,38 +28,82 @@
     padding: 0 8px;
     cursor: grab;
     height: 40px;
+    flex-shrink: 0;
 }
 
 .bar-top-contact:active {
     cursor: grabbing;
 }
 
-.left-top-bar{
+.body-contact {
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    gap: 10px; /* Space between items */
+    overflow-y: auto; /* Vertical scrollbar */
+    flex: 1;
+    padding: 10px;
+}
+
+.body-contact::-webkit-scrollbar {
+    width: 8px;
+}
+
+.body-contact::-webkit-scrollbar-track {
+    background: #C0C0C0;
+}
+
+.body-contact::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 2px;
+}
+
+.body-contact::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+.left-top-bar {
     background-color: #02007F;
     display: flex;
     align-items: center;
     gap: 8px;
 }
 
-.letter{
-    width:44px;
+.letter {
+    width: 44px;
     height: 38.28px;
     margin-left: 10px;
     margin-right: 10px;
 }
-.body-contact{
 
-    display: flex;
-    justify-content: space-evenly;
-
-}
-.title{
-
+.title {
     text-align: center;
 }
 
-.window-group{
+.window-group {
     display: flex;
     align-items: center;
     justify-content: flex-end;
+}
+
+.contact-panel.maximized {
+    width: calc(100vw - 50px);
+    height: calc(100vh - 50px);
+    top: 10px;
+    left: 10px;
+    right: auto;
+    bottom: auto;
+}
+
+.contact-panel.minimized {
+    width: 320px;
+    height: 40px;
+    overflow: hidden;
+}
+
+.contact-panel.minimized .body-contact {
+    display: none;
+}
+
+.contact-panel.minimized .bar-top-contact {
+    cursor: default;
 }

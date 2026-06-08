@@ -1,30 +1,57 @@
-import { useRef } from 'react';
+import { useRef, useState } from 'react';
 import man from "./images/about-icon.png";
 import WindowGroup from "./WindowGroup";
 import "./css/About.css"
 import Draggable from 'react-draggable';
 
-
-
-const Contact = () => {
+const About = ({ onClose }) => {
     const nodeRef = useRef(null);
+    const [isMaximized, setIsMaximized] = useState(false);
+    const [isMinimized, setIsMinimized] = useState(false);
+    const [position, setPosition] = useState({ x: 0, y: 0 });
+
+    const handleMinimize = () => {
+        setIsMaximized(false);
+        setIsMinimized((value) => !value);
+    };
+
+    const handleMaximize = () => {
+        setIsMinimized(false);
+        setIsMaximized((value) => !value);
+    };
+
+    const handleDrag = (_event, data) => {
+        if (!isMaximized) {
+            setPosition({ x: data.x, y: data.y });
+        }
+    };
+
+    const panelClassName = `about-panel${isMaximized ? ' maximized' : ''}${isMinimized ? ' minimized' : ''}`;
 
     return (
-        <Draggable 
+        <Draggable
             handle=".bar-top-about"
             nodeRef={nodeRef}
+            disabled={isMaximized}
+            position={isMaximized ? { x: 0, y: 0 } : position}
+            onDrag={handleDrag}
+            onStop={handleDrag}
         >
-            <div ref={nodeRef} className="about-panel">
+            <div ref={nodeRef} className={panelClassName}>
                 <div className="bar-top-about press-start-2p-regular">
                     <div className="left-top-bar">
                         <img className='man' src={man} alt="a man icon" />
                         <div className='title'>
                             About
                         </div>
-                        
                     </div>
                     <div className="window-group">
-                        <WindowGroup />
+                        <WindowGroup
+                            onClose={onClose}
+                            onMinimize={handleMinimize}
+                            onMaximize={handleMaximize}
+                            isMaximized={isMaximized}
+                        />
                     </div>
                 </div>
                 <div className="body-about">
@@ -40,4 +67,4 @@ const Contact = () => {
     );
 };
 
-export default Contact;
+export default About;

@@ -1,8 +1,7 @@
 *{
     box-sizing:border-box;
-
 }
-.container{
+.minimize-button{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -10,13 +9,9 @@
     height: 32px;
     background-color: #C0C0C0;
     border-left: #fff solid 3px;
-    border-left: #fff solid 3px;
     border-top: #fff solid 3px;
     border-bottom: #000000 solid 3px;
     border-right: #000000 solid 3px;
-    
-
-
 }
 
 .minimize-bar{

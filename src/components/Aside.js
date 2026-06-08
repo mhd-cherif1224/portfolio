@@ -3,7 +3,7 @@ import "./css/Aside.css";
 
 const navItems = ["Home", "Work", "Contact", "About"];
 
-const Aside = ({ onNavClick }) => {
+const Aside = ({ onNavClick, activePanel }) => {
     return (
         <aside className="aside">
                 <div className="left">
@@ -12,8 +12,9 @@ const Aside = ({ onNavClick }) => {
                         <NavBtn
                             key={item}
                             text={item}
-                            active={item === "Home"}
+                            active={item === activePanel}
                             iswork={item === "Work"}
+                            ishome={item === "Home"}
                             onClick={() => onNavClick(item)}
                         />
                     ))}

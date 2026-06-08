@@ -1,15 +1,13 @@
 import "./css/Close.css";
 
-const Close = () => {
+const Close = ({ onClick }) => {
     return(
-        <button className="close-button">
+        <button type="button" className="close-button window-control-button" onClick={onClick} aria-label="Close">
             <div className="close-icon">
                 <span />
                 <span />
             </div>
         </button>
-
-
     );
 }
 

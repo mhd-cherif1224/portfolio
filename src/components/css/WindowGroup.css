@@ -3,3 +3,15 @@
     align-items: center;
     gap: 6px;
 }
+
+.window-control-button {
+    cursor: pointer;
+}
+
+.window-control-button:hover {
+    filter: brightness(0.95);
+}
+
+.window-control-button:active {
+    transform: translateY(1px);
+}

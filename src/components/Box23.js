@@ -14,10 +14,10 @@ const Box23=()=>{
                 }}> 
             </div>
             <div className="on-buttton">
-                <img src={OnButton} src="the on button for the computer" />
+                <img src={OnButton} alt="the on button for the computer" />
             </div>
             <div className="on-icon">
-                <img src={OnIcon} src="the on icon for the computer" />
+                <img src={OnIcon} alt="the on icon for the computer" />
             </div>
 
         </div>

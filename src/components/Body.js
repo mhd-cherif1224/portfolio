@@ -22,6 +22,10 @@ const Body = () => {
         setActivePanel(activePanel === item ? null : item);
     };
 
+    const handleClosePanel = () => {
+        setActivePanel(null);
+    };
+
     return (
         <div className="body-wrapper">
             
@@ -29,7 +33,7 @@ const Body = () => {
             <Box21 />
             <Box31 />
 
-            <Aside onNavClick={handleNavClick} />
+            <Aside onNavClick={handleNavClick} activePanel={activePanel} />
             <div className="main press-start-2p-regular">
                 <div className="bar-top-home press-start-2p-regular">
                 <img className='home-icon' src={homeIcon} />Home V5.13 [en]</div>
@@ -39,8 +43,8 @@ const Body = () => {
                 <p className='name sedgwick-ave-display-regular'> Mehdi Cherif</p>
                 <p className='description press-start-2p-regular'>  I am a UI/UX Designer and a Front-End Developer, I believe that designing a web site is an art.</p>
                 <img className='music' src={music} alt="music"/>
-                {activePanel === 'Contact' && <Contact />}
-                {activePanel === 'About' && <About />}
+                {activePanel === 'Contact' && <Contact onClose={handleClosePanel} />}
+                {activePanel === 'About' && <About onClose={handleClosePanel} />}
             </div>
             <Box32 />
 

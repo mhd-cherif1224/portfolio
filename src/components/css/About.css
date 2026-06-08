@@ -1,28 +1,24 @@
-.about-panel{
+.about-panel {
     background-color: #C0C0C0;
-    width : 1500px;
-    height : 700px;
-    position: absolute;
-    top : 25%;
-    right : 25%;
-    transform: translate(-50%, -50%);
-    z-index : 999;
+    width: 1500px;
+    height: 700px;
+    position: fixed;
+    touch-action: none;
+    z-index: 999;
     border-top: #fff solid 3px;
     border-left: #fff solid 3px;
     border-bottom: #000000 solid 3px;
     border-right: #000000 solid 3px;
-    border-right-color: #000000 solid 3px;
-    position: fixed;
-    touch-action: none; 
+    display: flex;
+    flex-direction: column;
 }
 
-.about-panel.react-draggable-dragging{
-
+.about-panel.react-draggable-dragging {
     cursor: grabbing;
-    z-index: 99;
+    z-index: 1000;
 }
 
-.bar-top-about{
+.bar-top-about {
     background-color: #02007F;
     color: #fff;
     display: flex;
@@ -31,42 +27,91 @@
     padding: 0 8px;
     cursor: grab;
     height: 40px;
+    flex-shrink: 0;
 }
 
 .bar-top-about:active {
     cursor: grabbing;
 }
 
-.left-top-bar{
+.left-top-bar {
     display: flex;
     align-items: center;
     gap: 8px;
 }
 
-.man{
-    width:44px;
+.man {
+    width: 44px;
     height: 38.28px;
     margin-left: 10px;
     margin-right: 10px;
 }
 
-.body-about{
+.body-about {
     text-indent: 3rem;
     line-height: 155%;
     font-size: 1.4rem;
-
+    overflow-y: auto;
+    flex: 1;
+    padding: 20px;
 }
-.title{
 
+.body-about::-webkit-scrollbar {
+    width: 16px;
+}
+
+.body-about::-webkit-scrollbar-track {
+    background: #c0c0c0;
+}
+
+.body-about::-webkit-scrollbar-thumb {
+    background: #dfdfdf;
+    border: 2px solid;
+    border-color: #ffffff #000000 #000000 #ffffff;
+    box-shadow: inset 1px 1px 0px #ffffff, inset -1px -1px 0px #808080;
+}
+
+.body-about::-webkit-scrollbar-thumb:hover {
+    background: #e8e8e8;
+}
+
+.body-about::-webkit-scrollbar-thumb:active {
+    border-color: #000000 #ffffff #ffffff #000000;
+}
+
+.title {
     text-align: center;
 }
 
-.window-group{
+.window-group {
     display: flex;
     align-items: center;
     justify-content: flex-end;
 }
 
-.para-about{
-    margin : 70px;
+.para-about {
+    margin: 70px;
+}
+
+.about-panel.maximized {
+    width: calc(100vw - 20px);
+    height: calc(100vh - 20px);
+    top: 10px;
+    left: 10px;
+    right: auto;
+    bottom: auto;
+}
+
+.about-panel.minimized {
+    width: 320px;
+    height: 40px;
+    overflow: hidden;
+}
+
+.about-panel.minimized .body-about {
+    display: none;
+}
+
+.about-panel.minimized .bar-top-about {
+    cursor: default;
 }
